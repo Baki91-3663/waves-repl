@@ -11,3 +11,19 @@ workflows:
     # Run the welcome/run job in its own container
     jobs:
       - welcome/run
+store_test_results
+
+jobs:
+  build:
+    macos:
+      xcode: 11.3.0
+
+    steps:
+      # Commands will execute in macOS container
+      # with Xcode 11.3 installed
+      - run: xcodebuild -version
+add_ssh_keys
+
+
+run
+xcode builder
